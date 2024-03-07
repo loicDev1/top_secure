@@ -13,7 +13,8 @@ function ClientSection() {
           </div>
           <div className="carousel-wrap ">
             <div className=" client_owl-carousel">
-              <div className="item">
+              <div className="item" data-aos="fade-left"
+                data-aos-duration="1000" data-aos-offset="200">
                 <div className="box">
                   <div className="img-box">
                     <img src="images/client2.jpg" alt="" className="box-img" />
@@ -34,10 +35,11 @@ function ClientSection() {
                   </div>
                 </div>
               </div>
-              <div className="item">
+              <div className="item" data-aos="fade-right"
+                data-aos-duration="1000" data-aos-offset="200"> 
                 <div className="box">
                   <div className="img-box">
-                    <img src="images/client1.jpg" alt="" className="box-img" />
+                    <img src="images/client1.jpg" alt="" className="box-img"/>
                   </div>
                   <div className="detail-box">
                     <div className="client_id">

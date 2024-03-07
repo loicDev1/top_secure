@@ -5,7 +5,8 @@ function Apropos() {
     <>
       <section className="about_section layout_padding">
         <div className="container  ">
-          <div className="heading_container heading_center">
+          <div className="heading_container heading_center" data-aos="fade-up"
+                data-aos-duration="1000">
             <h2>
               A propos de <span>Nous</span>
             </h2>
@@ -37,7 +38,8 @@ function Apropos() {
                   unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam
                   ab omnis quasi expedita.
                 </p>
-                <a href="">Read More</a>
+                <a href="" data-aos="zoom-in"
+                data-aos-duration="1500" data-aos-offset="100">Read More</a>
               </div>
             </div>
           </div>

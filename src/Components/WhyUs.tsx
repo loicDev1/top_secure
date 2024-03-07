@@ -4,12 +4,12 @@ function WhyUs() {
       <section className="why_section layout_padding">
         <div className="container">
           <div className="heading_container heading_center">
-            <h2>
+            <h2 data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200">
               Pourquoi choisir <span>TopSecure</span>
             </h2>
           </div>
           <div className="why_container">
-            <div className="box">
+            <div className="box" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
               <div className="img-box">
                 <img src="images/w1.png" alt="" />
               </div>
@@ -25,7 +25,7 @@ function WhyUs() {
                 </p>
               </div>
             </div>
-            <div className="box">
+            <div className="box" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
               <div className="img-box">
                 <img src="images/w2.png" alt="" />
               </div>
@@ -41,7 +41,7 @@ function WhyUs() {
                 </p>
               </div>
             </div>
-            <div className="box">
+            <div className="box" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
               <div className="img-box">
                 <img src="images/w3.png" alt="" />
               </div>
@@ -57,7 +57,7 @@ function WhyUs() {
                 </p>
               </div>
             </div>
-            <div className="box">
+            <div className="box" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
               <div className="img-box">
                 <img src="images/w4.png" alt="" />
               </div>

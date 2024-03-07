@@ -7,20 +7,17 @@ export function Reveal() {
   };
 
   const handleIntersect = (entries: any[], observer: any) => {
-    entries.forEach(
-      (entry: {
-        IntersectionRatio: number;
-        target: { classList: { add: (arg0: string) => void } };
-      }) => {
-        if (entry.IntersectionRatio > ratio) {
-          entry.target.classList.add("reveal-visible");
-          observer.unobserve(entry.target);
-        }
+    entries.forEach((entry: any) => {
+      if (entry.IntersectionRatio > ratio) {
+        console.log("entry.IntersectionRatio : ", entry.IntersectionRatio);
+        entry.target.classList.add("reveal-visible");
+        observer.unobserve(entry.target);
       }
-    );
+    });
   };
 
   const observer = new IntersectionObserver(handleIntersect, options);
-  
-  observer.observe(document.querySelector(".reveal")!);
+  document.querySelectorAll(".reveal")!.forEach((e) => {
+    observer.observe(e);
+  });
 }

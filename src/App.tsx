@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 // import { sendUserInfosByEmail } from "./utils/Methods";
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "/vite.svg";
@@ -10,7 +10,9 @@ import Footer from "./Components/Footer";
 import ClientSection from "./Components/ClientSection";
 import WhyUs from "./Components/WhyUs";
 import SubmissionForm from "./Components/SubmissionForm";
-import { Reveal } from "./utils/Reveal";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 function App() {
   // const newInfosUser: InfosUser = {
@@ -33,8 +35,6 @@ function App() {
   //     import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
   //   );
   // }
-
-  useEffect(() => Reveal(), []);
 
   return (
     <>
