@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { sendUserInfosByEmail } from "./utils/Methods";
+import { useEffect } from "react";
+// import { sendUserInfosByEmail } from "./utils/Methods";
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "/vite.svg";
-import { InfosUser } from "./utils/Types";
+// import { InfosUser } from "./utils/Types";
 import CarouselSection from "./Components/CarouselSection";
 import Services from "./Components/Services";
 import Apropos from "./Components/Apropos";
