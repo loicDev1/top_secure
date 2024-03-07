@@ -1,7 +1,7 @@
 // import React from "react";
 import Navbar from "./Navbar";
 import hero_bg from '../assets/img/hero-bg.png'
-import slider_img from '../assets/slider-img.png'
+import slider_img from '../assets/img/slider-img.png'
 
 function CarouselSection() {
   return (
@@ -22,7 +22,7 @@ function CarouselSection() {
             data-ride="carousel"
           >
             <div className="carousel-inner">
-              <div className="carousel-item active">
+              <div className="carousel-item">
                 <div className="container ">
                   <div className="row">
                     <div className="col-md-6 ">
@@ -47,13 +47,13 @@ function CarouselSection() {
                     </div>
                     <div className="col-md-6">
                       <div className="img-box">
-                        <img src="images/slider-img.png" alt="" />
+                      <img src={slider_img} alt="" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="carousel-item ">
+              <div className="carousel-item active">
                 <div className="container ">
                   <div className="row">
                     <div className="col-md-6 ">

@@ -1,5 +1,7 @@
 // import React from "react";
 // import client1 from "../../images/client1.jpg";
+import client1 from '../assets/img/client1.jpg'
+import client2 from '../assets/img/client2.jpg'
 
 function ClientSection() {
   return (
@@ -17,7 +19,7 @@ function ClientSection() {
                 data-aos-duration="1000" data-aos-offset="200">
                 <div className="box">
                   <div className="img-box">
-                    <img src="images/client2.jpg" alt="" className="box-img" />
+                    <img src={client2} alt="" className="box-img" />
                   </div>
                   <div className="detail-box">
                     <div className="client_id">
@@ -39,7 +41,7 @@ function ClientSection() {
                 data-aos-duration="1000" data-aos-offset="200"> 
                 <div className="box">
                   <div className="img-box">
-                    <img src="images/client1.jpg" alt="" className="box-img"/>
+                    <img src={client1} alt="" className="box-img"/>
                   </div>
                   <div className="detail-box">
                     <div className="client_id">

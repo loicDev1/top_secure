@@ -1,4 +1,7 @@
 // import React from "react";
+import s1 from '../assets/img/s1.png'
+import s2 from '../assets/img/s2.png'
+import s3 from '../assets/img/s3.png'
 
 function Services() {
   return (
@@ -29,7 +32,7 @@ function Services() {
                   data-aos-duration="1000"
                 >
                   <div className="img-box">
-                    <img src="images/s1.png" alt="" />
+                  <img src={s1} alt="" />
                   </div>
                   <div className="detail-box">
                     <h5>Currency Wallet</h5>
@@ -50,7 +53,7 @@ function Services() {
                   data-aos-duration="1500"
                 >
                   <div className="img-box">
-                    <img src="images/s2.png" alt="" />
+                  <img src={s2} alt="" />
                   </div>
                   <div className="detail-box">
                     <h5>Security Storage</h5>
@@ -71,7 +74,7 @@ function Services() {
                   data-aos-duration="2000"
                 >
                   <div className="img-box">
-                    <img src="images/s3.png" alt="" />
+                    <img src={s3} alt="" />
                   </div>
                   <div className="detail-box">
                     <h5>Expert Support</h5>

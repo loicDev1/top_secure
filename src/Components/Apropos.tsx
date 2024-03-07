@@ -1,4 +1,5 @@
 // import React from "react";
+import about_img from '../assets/img/about-img.png'
 
 function Apropos() {
   return (
@@ -18,7 +19,7 @@ function Apropos() {
           <div className="row">
             <div className="col-md-6 ">
               <div className="img-box">
-                <img src="images/about-img.png" alt="" />
+                <img src={about_img} alt="" />
               </div>
             </div>
             <div className="col-md-6">

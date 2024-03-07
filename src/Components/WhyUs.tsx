@@ -1,3 +1,8 @@
+import w1 from '../assets/img/w1.png'
+import w2 from '../assets/img/w2.png'
+import w3 from '../assets/img/w3.png'
+import w4 from '../assets/img/w4.png'
+
 function WhyUs() {
   return (
     <>
@@ -11,7 +16,7 @@ function WhyUs() {
           <div className="why_container">
             <div className="box" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
               <div className="img-box">
-                <img src="images/w1.png" alt="" />
+                <img src={w1} alt="" />
               </div>
               <div className="detail-box">
                 <h5>Expert Management</h5>
@@ -27,7 +32,7 @@ function WhyUs() {
             </div>
             <div className="box" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
               <div className="img-box">
-                <img src="images/w2.png" alt="" />
+                <img src={w2} alt="" />
               </div>
               <div className="detail-box">
                 <h5>Secure Investment</h5>
@@ -43,7 +48,7 @@ function WhyUs() {
             </div>
             <div className="box" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
               <div className="img-box">
-                <img src="images/w3.png" alt="" />
+                <img src={w3} alt="" />
               </div>
               <div className="detail-box">
                 <h5>Instant Trading</h5>
@@ -59,7 +64,7 @@ function WhyUs() {
             </div>
             <div className="box" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
               <div className="img-box">
-                <img src="images/w4.png" alt="" />
+                <img src={w4} alt="" />
               </div>
               <div className="detail-box">
                 <h5>Happy Customers</h5>
