@@ -14,6 +14,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
 
+
+
 function App() {
   // const newInfosUser: InfosUser = {
   //   name: "test User send",
