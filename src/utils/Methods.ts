@@ -8,12 +8,7 @@ export const sendUserInfosByEmail = async (
   publicKey: string
 ) => {
   try {
-    const response = await emailjs.send(
-      serviceID,
-      templateID,
-      infosUser,
-      publicKey
-    );
+    await emailjs.send(serviceID, templateID, infosUser, publicKey);
   } catch (error) {
     console.log(error);
   }

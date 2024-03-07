@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Navbar from "./Navbar";
 import hero_bg from '../assets/img/hero-bg.png'
 

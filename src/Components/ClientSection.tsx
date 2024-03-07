@@ -1,5 +1,5 @@
-import React from "react";
-import client1 from "../../images/client1.jpg";
+// import React from "react";
+// import client1 from "../../images/client1.jpg";
 
 function ClientSection() {
   return (
