@@ -1,6 +1,7 @@
 // import React from "react";
 import Navbar from "./Navbar";
 import hero_bg from '../assets/img/hero-bg.png'
+import slider_img from '../assets/slider-img.png'
 
 function CarouselSection() {
   return (
@@ -77,7 +78,7 @@ function CarouselSection() {
                     </div>
                     <div className="col-md-6">
                       <div className="img-box">
-                        <img src="images/slider-img.png" alt="" />
+                        <img src={slider_img} alt="" />
                       </div>
                     </div>
                   </div>
