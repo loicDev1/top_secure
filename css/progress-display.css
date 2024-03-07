@@ -1,0 +1,11 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(-30);
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.85,.13,.22,.99);
+  }
+  
