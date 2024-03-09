@@ -13,14 +13,14 @@ function SubmissionForm() {
   const [user, setUser] = useState(infosUser);
   const [ticketsFieldGenerate, setTicketsFieldGenerate] = useState([]);
 
-  const setUserTicket = (e: any) => {
-    console.log(document.querySelector(".selected"));
+  // const setUserTicket = (e: any) => {
+  //   console.log(document.querySelector(".selected"));
 
-    // const ticket = e.target.innerHTML
-    // console.log(ticket);
+  //   // const ticket = e.target.innerHTML
+  //   // console.log(ticket);
 
-    // setUser({...user , ticket});
-  };
+  //   // setUser({...user , ticket});
+  // };
 
   const createTicketFieldsByTicketNumber = (ticketNumber: any) => {
     const ticketField: any = [];
