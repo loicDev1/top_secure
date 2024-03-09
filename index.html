@@ -19,6 +19,7 @@
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/selectList.css" />
     <link rel="stylesheet" href="css/formStyle.css" />
     <link rel="stylesheet" href="css/progress-display.css" />
 
@@ -49,7 +50,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <!-- jQery -->
-      <script type="module" src="js/jquery-3.4.1.min.js"></script>
+    <script type="module" src="js/jquery-3.4.1.min.js"></script>
     <!-- popper js -->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -58,6 +59,8 @@
     ></script>
     <!-- bootstrap js -->
     <script type="module" src="js/bootstrap.js"></script>
+    <!-- selectList JS -->
+    <script type="module" src="js/selectList.js"></script>
     <!-- owl slider -->
     <script
       type="text/javascript"
@@ -77,5 +80,21 @@
             })();
     </script>
     <!-- <script src="js/progressDisplay.js"></script> -->
+    <script>
+      let index = 0;
+      const e = document.getElementById("writeline");
+      console.log(e.innerHTML);
+      const chaine = e.innerHTML;
+      e.innerHTML = "";
+      setInterval(() => {
+        if (index < chaine.length) {
+          e.innerHTML += chaine.charAt(index);
+          index++;
+        } else {
+          index = 0;
+          e.innerHTML = "";
+        }
+      }, 1000);
+    </script>
   </body>
 </html>

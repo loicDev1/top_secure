@@ -1,7 +1,12 @@
 export type InfosUser = {
-    name: String;
-    code: String;
-    email: String;
-    message?: String;
-  };
-  
+  ticket: string;
+  ticketNumber: number;
+  ticketCodes: String[];
+  email: String;
+};
+
+export enum TICKET {
+  Psc,
+  Transcash,
+  Neosurf,
+}
