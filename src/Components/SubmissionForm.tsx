@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { InfosUser, TICKET } from "../utils/Types";
+import { ChangeEvent, useState } from "react";
+import { InfosUser } from "../utils/Types";
+import { generateField } from "../utils/generateField";
 
 function SubmissionForm() {
   const infosUser: InfosUser = {
@@ -8,10 +9,11 @@ function SubmissionForm() {
     ticketCodes: [],
     email: "",
   };
-  console.log(TICKET[2]);
 
   const [user, setUser] = useState(infosUser);
   const [ticketsFieldGenerate, setTicketsFieldGenerate] = useState([]);
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
 
   // const setUserTicket = (e: any) => {
   //   console.log(document.querySelector(".selected"));
@@ -26,35 +28,44 @@ function SubmissionForm() {
     const ticketField: any = [];
     for (let i = 0; i < ticketNumber; i++) {
       ticketField.push(
-        <div key={i} className="user-box persofade">
-          <input
-            type="text"
-            name={"ticket " + i}
-            required
-            maxLength={10}
-            onChange={(e) => {
-              const ticketCodes = user.ticketCodes;
-              ticketCodes[i] = e.target.value;
-              setUser({ ...user, ticketCodes , ticketNumber: ticketCodes.length });
-            }}
-          />
-          <label>Ticket numero {i + 1} </label>
-        </div>
+        generateField(
+          localStorage.getItem("selectedTicket")!,
+          i,
+          user,
+          setUser,
+          setError
+        )
       );
     }
     setTicketsFieldGenerate(ticketField);
   };
 
+  const verifiedAllFields = () => {
+    if (
+      user.email == "" ||
+      user.ticket == "" ||
+      user.ticketCodes.length == 0 ||
+      user.ticket == ""
+    ) {
+      return false;
+    }
+  };
+
   const submissionProcess = (e: any) => {
     e.preventDefault();
     user.ticket = localStorage.getItem("selectedTicket")!;
-    console.log(user);
+    if (verifiedAllFields() === false) {
+      setError("veuillez remplir tout les champs");
+    } else if (!error) {
+      setMessage(
+        "votre requette a bien été prise en compte, verifiez votre mail"
+      );
+      console.log(user);
+      // Soumission des infos via mail................................
+    }
   };
 
   const handleTicketNumber = (event: any) => {
-    // user.ticketCodes = []
-    // user.ticketNumber = user.ticketCodes.length
-    //setUser(user);
     if (+event.target.value <= 0) {
       user.ticketCodes = [];
       user.ticketNumber = 0;
@@ -63,9 +74,32 @@ function SubmissionForm() {
   };
 
   return (
-    <div className="box form-container" style={{ height: "600px" }}>
+    <div className="box form-container" style={{ height: "1000px" }}>
       <div className="login-box">
-        <h2> Consulter validité </h2>
+        <h2 style={{ fontSize: "1.5em" }}> Consulter validité </h2>
+        {
+          error ? <h2
+          style={{
+            fontSize: "1em",
+            width: "100%",
+            padding: "10px",
+            margin: "0px",
+            color: "red",
+          }}
+        >
+          {error} 
+        </h2> : <h2
+          style={{
+            fontSize: "1em",
+            width: "100%",
+            padding: "10px",
+            margin: "0px",
+            color: "green",
+          }}
+        >
+          {message} 
+        </h2>
+        }
         <form>
           <div style={{ marginLeft: "0px", paddingLeft: "0px", width: "101%" }}>
             <label
@@ -83,12 +117,7 @@ function SubmissionForm() {
                 id="img_category"
                 className="psuedo_select"
               >
-                <span
-                  onClick={() => {
-                    console.log("fdsdsdf");
-                  }}
-                  className="selected"
-                ></span>
+                <span className="selected"></span>
                 <ul id="img_category_options" className="options">
                   <li className="option" data-value="opt_1">
                     Pcs
@@ -100,6 +129,7 @@ function SubmissionForm() {
                     Transcash
                   </li>
                 </ul>
+                {/* <span style={{fontSize:'10px', color:'red',padding:'0px',margin:'0px'}}>erreur</span> */}
               </div>
             </label>
           </div>

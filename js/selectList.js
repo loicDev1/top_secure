@@ -157,7 +157,7 @@ var util = {
                   nested_nested_child = nested_nested_children[iii]
                   if (util.f.isElem(nested_nested_child) && nested_nested_child.tagName == "LI") {
                     size += util.f.getSize(nested_nested_child, "height")
-                    console.log("size: " + size)
+                    //console.log("size: " + size)
                   }
                 }
                 util.f.addStyle(nested_child, ["Height", "Opacity"], [size + "px", 1])
