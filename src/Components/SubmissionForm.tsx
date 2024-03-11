@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 import { InfosUser } from "../utils/Types";
 import { generateField } from "../utils/generateField";
 
