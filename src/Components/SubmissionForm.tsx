@@ -75,7 +75,7 @@ function SubmissionForm() {
 
   return (
     <div className="box form-container" style={{ height: "1000px" }}>
-      <div className="login-box">
+      <div className="login-box" style={{width:"90%"}}>
         <h2 style={{ fontSize: "1.5em" }}> Consulter validité </h2>
         {
           error ? <h2
