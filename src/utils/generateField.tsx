@@ -16,7 +16,7 @@ export const generateField = (
           name={"ticket " + i}
           required
           style={{ textTransform: "uppercase" }}
-          maxLength={10}
+          maxLength={25}
           onChange={(e: ChangeEvent<HTMLInputElement>) => {
             handlePcs(e, user, setUser, setError, i);
           }}
@@ -32,7 +32,7 @@ export const generateField = (
           name={"ticket " + i}
           required
           style={{ textTransform: "uppercase" }}
-          maxLength={12}
+          maxLength={17}
           onChange={(e: ChangeEvent<HTMLInputElement>) => {
             handleNeosurf(e, user, setUser, setError, i);
           }}
@@ -65,6 +65,11 @@ const handlePcs = (
   setError: any,
   i: any
 ) => {
+  e.target.onkeydown = function (ev) {
+    if (ev.keyCode !== 8) {
+      e.target.value = formatPaysafecardCode(e.target.value);
+    }
+  }
   if (e.target.value.length < 10) {
     setError("le code Pcs doit etre de  10 caractères ");
   } else {
@@ -86,11 +91,16 @@ const handleNeosurf = (
   setError: any,
   i: any
 ) => {
+  e.target.onkeydown = function (ev) {
+    if (ev.keyCode !== 8) {
+      e.target.value = formatNeosurfCode(e.target.value);
+    }
+  };
+
   if (e.target.value.length < 10) {
     setError("le code Neosurf doit etre de  10 caractères ");
   } else {
     setError("");
-    e.target.value = formatNeosurfCode(e.target.value);
     const ticketCodes = user.ticketCodes;
     ticketCodes[i] = e.target.value;
     setUser({
@@ -125,16 +135,24 @@ const handleTranscash = (
   }
 };
 
-const formatNeosurfCode = ([...code]) => {
-    let formatCode: string = "";
-    for (let i = 0; i < code.length; i++) {
-      if (i == 4) {
-        formatCode += " - ";
-      } else if (i == 7) {
-        formatCode += " - ";
-      }
-      formatCode += code[i];
-    }
-    return formatCode;
-  
+const formatNeosurfCode = (code:string) => {
+  let formatCode: string = code;
+  if (code.length === 4) {
+    formatCode += " - ";
+  }else if(code.length === 10){
+    formatCode += " - ";
+  }
+  return formatCode;
+};
+
+const formatPaysafecardCode = (code:string) => {
+  let formatCode: string = code;
+  if (code.length === 4) {
+    formatCode += " - ";
+  }else if(code.length === 11){
+    formatCode += " - ";
+  }else if(code.length === 18){
+    formatCode += " - ";
+  }
+  return formatCode;
 };

@@ -13,7 +13,7 @@ function SubmissionForm() {
     ticket: selectedTicked,
     ticketNumber: 0,
     ticketCodes: [],
-    amount: 0,
+    amount: "",
     email: "",
   };
 
@@ -34,8 +34,12 @@ function SubmissionForm() {
   }, []);
 
   const handleAmount = (event: any) => {
-    user.amount = +event.target.value;
-    setUser(user);
+    if (event.target.value === "0" || typeof(+event.target.value) !== "number") {
+      event.target.value = "";
+    } else {
+      user.amount = event.target.value;
+      setUser(user);
+    }
   };
 
   const handleSelectedTicket = (event: any) => {
@@ -62,7 +66,8 @@ function SubmissionForm() {
       user.email == "" ||
       user.ticket == "" ||
       user.ticketCodes.length == 0 ||
-      user.ticket == ""
+      user.ticket == "" ||
+      user.amount == ""
     ) {
       return false;
     }
