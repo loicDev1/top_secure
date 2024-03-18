@@ -57,7 +57,7 @@ function CarouselSection() {
                 <div className="container ">
                   <div className="row">
                     <div className="col-md-6 ">
-                      <div className="detail-box">
+                      <div className="detail-box" data-aos="fade-up" data-aos-duration="1300">
                         <h1>
                           Crypto <br />
                           Currency
@@ -88,7 +88,7 @@ function CarouselSection() {
                 <div className="container ">
                   <div className="row">
                     <div className="col-md-6 ">
-                      <div className="detail-box">
+                      <div className="detail-box" data-aos="fade-up" data-aos-duration="1000">
                         <h1>
                           Crypto <br />
                           Currency

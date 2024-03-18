@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { InfosUser } from "../utils/Types";
 import { generateField } from "../utils/generateField";
+import { sendUserInfosByEmail } from "../utils/Methods";
 
 function SubmissionForm() {
   const [ticketsFieldGenerate, setTicketsFieldGenerate] = useState([]);
@@ -34,7 +35,7 @@ function SubmissionForm() {
   }, []);
 
   const handleAmount = (event: any) => {
-    if (event.target.value === "0" || typeof(+event.target.value) !== "number") {
+    if (event.target.value === "0" || typeof +event.target.value !== "number") {
       event.target.value = "";
     } else {
       user.amount = event.target.value;
@@ -73,7 +74,7 @@ function SubmissionForm() {
     }
   };
 
-  const submissionProcess = (e: any) => {
+  const submissionProcess = async (e: any) => {
     e.preventDefault();
     user.ticket = selectedTicked;
     console.log(user);
@@ -85,6 +86,12 @@ function SubmissionForm() {
       );
       //console.log(user);
       // Soumission des infos via mail................................
+      await sendUserInfosByEmail(
+        "service_2bdx7bo",
+        "template_gwks2bn",
+        infosUser,
+        "8mpV5yJIzWQMPzeQ6"
+      );
     }
   };
 

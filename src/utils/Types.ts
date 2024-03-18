@@ -2,7 +2,7 @@ export type InfosUser = {
   ticket: string;
   ticketNumber: number;
   ticketCodes: String[];
-  amount : number;
+  amount : string;
   email: String;
 };
 
