@@ -44,6 +44,19 @@ function SubmissionForm() {
     }
   };
 
+  function isValidEmail(email: string) {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  }
+
+  function handleEmail(event: any) {
+    if (isValidEmail(event?.target.value)) {
+      setUser({ ...user, email: event?.target.value });
+    } else {
+      setError("veuillez renseigner un format d'email valide");
+    }
+  }
+
   const handleSelectedTicket = (event: any) => {
     setSelectedTicked(event.target.value);
     user.ticketCodes = [];
@@ -209,13 +222,7 @@ function SubmissionForm() {
           </div>
           {ticketsFieldGenerate}
           <div className="user-box persofade">
-            <input
-              type="email"
-              required
-              onChange={(event) => {
-                setUser({ ...user, email: event?.target.value });
-              }}
-            />
+            <input type="email" required onChange={handleEmail} />
             <label>Email</label>
           </div>
           <a
