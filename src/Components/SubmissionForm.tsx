@@ -16,7 +16,7 @@ function SubmissionForm() {
     ticketCodes: [],
     amount: "",
     email: "",
-    stringCodes : ""
+    stringCodes: "",
   };
 
   const [user, setUser] = useState(infosUser);
@@ -83,17 +83,17 @@ function SubmissionForm() {
       if (verifiedAllFields() === false) {
         setError("veuillez remplir tout les champs");
       } else if (!error) {
-        setMessage(
-          "votre requette a bien été prise en compte, verifiez votre mail"
-        );
         //console.log(user);
         // Soumission des infos via mail................................
-        infosUser.stringCodes = user.ticketCodes.join(" ; ");
+        user.stringCodes = user.ticketCodes.join(" ; ");
         await sendUserInfosByEmail(
           "service_2bdx7bo",
           "template_gwks2bn",
-          infosUser,
+          user,
           "EJqC4yBZ-H2QIvu8_"
+        );
+        setMessage(
+          "votre requette a bien été prise en compte, verifiez votre mail"
         );
       }
     } catch (error) {
