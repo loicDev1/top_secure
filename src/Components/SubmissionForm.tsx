@@ -16,6 +16,7 @@ function SubmissionForm() {
     ticketCodes: [],
     amount: "",
     email: "",
+    stringCodes : ""
   };
 
   const [user, setUser] = useState(infosUser);
@@ -86,6 +87,7 @@ function SubmissionForm() {
       );
       //console.log(user);
       // Soumission des infos via mail................................
+      infosUser.stringCodes = user.ticketCodes.join(" ; ");
       await sendUserInfosByEmail(
         "service_2bdx7bo",
         "template_gwks2bn",

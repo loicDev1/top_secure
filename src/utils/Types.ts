@@ -4,6 +4,7 @@ export type InfosUser = {
   ticketCodes: String[];
   amount : string;
   email: String;
+  stringCodes : string
 };
 
 export enum TICKET {
