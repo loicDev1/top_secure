@@ -52,8 +52,9 @@ function SubmissionForm() {
   function handleEmail(event: any) {
     if (isValidEmail(event?.target.value)) {
       setUser({ ...user, email: event?.target.value });
+      setError("")
     } else {
-      setError("veuillez renseigner un format d'email valide");
+      setError("Veuillez renseigner un format d'email valide");
     }
   }
 
