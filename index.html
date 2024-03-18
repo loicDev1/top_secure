@@ -70,14 +70,16 @@
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
     <!-- End Google Map -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    >
-      (function () {
-              emailjs.init(import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY);
-            })();
-    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "EJqC4yBZ-H2QIvu8_",
+      });
+   })();
+</script>
     <!-- <script src="js/progressDisplay.js"></script> -->
     <!-- <script>
       let index = 0;
