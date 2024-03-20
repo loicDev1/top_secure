@@ -70,12 +70,22 @@ const handlePcs = (
   setError: any,
   i: any
 ) => {
+  if (
+    ![...tabValues].includes(
+      e.target.value.split("")[e.target.value.length - 1]
+    )
+  ) {
+    const newVal = e.target.value
+      .split("")
+      .filter((_i, v) => v < e.target.value.length - 1);
+    e.target.value = newVal.join("");
+  }
   e.target.onkeydown = function (ev) {
     if (ev.keyCode !== 8) {
       e.target.value = formatPaysafecardCode(e.target.value);
     }
   };
-  if (e.target.value.length < 10) {
+  if (e.target.value.length < 10 && e.target.value != "") {
     setError("le code Pcs doit etre de  10 caractères ");
   } else {
     setError("");
@@ -131,13 +141,11 @@ const handleTranscash = (
       .filter((_i, v) => v < e.target.value.length - 1);
     e.target.value = newVal.join("");
   }
-  if (e.target.value.toString().length < 12) {
+  if (e.target.value.toString().length < 12 && e.target.value != "") {
     setError("le code Transcah doit etre de  12 caractères ");
-  } else if (e.target.value.toString().length <= 12) {
-    stringValue = e.target.value;
   } else {
     setError("");
-    e.target.value = stringValue;
+    //e.target.value = stringValue;
     const ticketCodes = user.ticketCodes;
     ticketCodes[i] = e.target.value;
     setUser({
