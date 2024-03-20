@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-let stringValue: string = "";
+//let stringValue: string = "";
 const tabValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
 // function isAvalueNumber(value :any){
