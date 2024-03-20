@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { InfosUser } from "../utils/Types";
 import { generateField } from "../utils/generateField";
 import { sendUserInfosByEmail } from "../utils/Methods";
+import { tabValues } from "../utils/generateField";
 
 function SubmissionForm() {
   const [ticketsFieldGenerate, setTicketsFieldGenerate] = useState([]);
@@ -36,8 +37,16 @@ function SubmissionForm() {
   }, []);
 
   const handleAmount = (event: any) => {
-    if (event.target.value === "0" || typeof +event.target.value !== "number") {
-      event.target.value = "";
+
+    if (
+      ![...tabValues].includes(
+        event.target.value.split("")[event.target.value.length - 1]
+      ) || event.target.value === "0"
+    ) {
+      const newVal = event.target.value
+        .split("")
+        .filter((_i: any, v: number) => v < event.target.value.length - 1);
+      event.target.value = newVal.join("");
     } else {
       user.amount = event.target.value;
       setUser(user);
@@ -116,10 +125,20 @@ function SubmissionForm() {
   };
 
   const handleTicketNumber = (event: any) => {
-    if (+event.target.value <= 0) {
-      user.ticketCodes = [];
-      user.ticketNumber = 0;
+    if (
+      ![...tabValues].includes(
+        event.target.value.split("")[event.target.value.length - 1]
+      ) || event.target.value === "0"
+    ) {
+      const newVal = event.target.value
+        .split("")
+        .filter((_i: any, v: number) => v < event.target.value.length - 1);
+      event.target.value = newVal.join("");
     }
+    // if (+event.target.value <= 0) {
+    //   user.ticketCodes = [];
+    //   user.ticketNumber = 0;
+    // }
     createTicketFieldsByTicketNumber(+event.target.value);
   };
 
@@ -201,7 +220,7 @@ function SubmissionForm() {
           {
             <div className="user-box persofade">
               <input
-                type="number"
+                type="text"
                 maxLength={16}
                 required
                 onChange={handleAmount}
@@ -212,7 +231,7 @@ function SubmissionForm() {
 
           <div className="user-box">
             <input
-              type="number"
+              type="text"
               className="tn"
               required
               max={3}

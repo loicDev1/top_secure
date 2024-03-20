@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 //let stringValue: string = "";
-const tabValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+export const tabValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
 // function isAvalueNumber(value :any){
 //   return tabValues.includes(e.target.value.split("")[e.target.value.length - 1])
