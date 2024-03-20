@@ -1,6 +1,35 @@
 import { ChangeEvent } from "react";
 //let stringValue: string = "";
 export const tabValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+const tabAnValue = [
+  ...tabValues,
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
 
 // function isAvalueNumber(value :any){
 //   return tabValues.includes(e.target.value.split("")[e.target.value.length - 1])
@@ -106,13 +135,23 @@ const handleNeosurf = (
   setError: any,
   i: any
 ) => {
+  if (
+    ![...tabAnValue].includes(
+      e.target.value.split("")[e.target.value.length - 1]
+    )
+  ) {
+    const newVal = e.target.value
+      .split("")
+      .filter((_i, v) => v < e.target.value.length - 1);
+    e.target.value = newVal.join("");
+  }
   e.target.onkeydown = function (ev) {
     if (ev.keyCode !== 8) {
       e.target.value = formatNeosurfCode(e.target.value);
     }
   };
 
-  if (e.target.value.length < 10) {
+  if (e.target.value.length < 10 && e.target.value != "") {
     setError("le code Neosurf doit etre de  10 caractères ");
   } else {
     setError("");
