@@ -8,7 +8,7 @@ import Services from "./Components/Services";
 import Apropos from "./Components/Apropos";
 import Footer from "./Components/Footer";
 import ClientSection from "./Components/ClientSection";
-import WhyUs from "./Components/WhyUs";
+import WhyItWork from "./Components/WhyItWork";
 import SubmissionForm from "./Components/SubmissionForm";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -42,10 +42,10 @@ function App() {
     <>
       <CarouselSection />
       <Services />
-      <Apropos />
+      {/* <Apropos /> */}
       <ClientSection />
+      <WhyItWork />
       <SubmissionForm />
-      <WhyUs />
       <Footer />
     </>
   );

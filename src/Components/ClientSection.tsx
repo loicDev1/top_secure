@@ -6,7 +6,7 @@ import client2 from '../assets/img/client2.jpg'
 function ClientSection() {
   return (
     <>
-      <section className="client_section layout_padding">
+      <section className="client_section">
         <div className="container">
           <div className="heading_container heading_center psudo_white_primary mb_45">
             <h2>
@@ -24,15 +24,13 @@ function ClientSection() {
                   <div className="detail-box">
                     <div className="client_id">
                       <div className="client_info">
-                        <h6>Zen Court</h6>
-                        <p>magna aliqua. Ut</p>
+                        <h6>Davilla</h6>
+                        <p>Utilisateur premium Top Secure</p>
                       </div>
                       <i className="fa fa-quote-left" aria-hidden="false"></i>
                     </div>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis{" "}
+                    topsecure tu me facilite la vie,en me permettant de consulter le solde de ma recharge.
                     </p>
                   </div>
                 </div>
@@ -46,15 +44,13 @@ function ClientSection() {
                   <div className="detail-box">
                     <div className="client_id">
                       <div className="client_info">
-                        <h6>LusDen</h6>
-                        <p>magna aliqua. Ut</p>
+                        <h6>Lucien</h6>
+                        <p>Utilisateur premium Top Secure</p>
                       </div>
                       <i className="fa fa-quote-left" aria-hidden="true"></i>
                     </div>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis{" "}
+                    Top Secure c'est facile. tu reçois le mail de validité 1 minute plus tard 
                     </p>
                   </div>
                 </div>

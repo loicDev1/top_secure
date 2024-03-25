@@ -3,14 +3,14 @@ import w2 from '../assets/img/w2.png'
 import w3 from '../assets/img/w3.png'
 import w4 from '../assets/img/w4.png'
 
-function WhyUs() {
+function WhyItWork() {
   return (
     <>
       <section className="why_section layout_padding">
         <div className="container">
           <div className="heading_container heading_center">
             <h2 data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="200">
-              Pourquoi choisir <span>TopSecure</span>
+              Comment fonctionne <span>TopSecure</span>  ?
             </h2>
           </div>
           <div className="why_container">
@@ -21,12 +21,7 @@ function WhyUs() {
               <div className="detail-box">
                 <h5>Expert Management</h5>
                 <p>
-                  Incidunt odit rerum tenetur alias architecto asperiores omnis
-                  cumque doloribus aperiam numquam! Eligendi corrupti, molestias
-                  laborum dolores quod nisi vitae voluptate ipsa? In tempore
-                  voluptate ducimus officia id, aspernatur nihil. Tempore
-                  laborum nesciunt ut veniam, nemo officia ullam repudiandae
-                  repellat veritatis unde reiciendis possimus animi autem natus
+                  choisir le type de la carte prépayée
                 </p>
               </div>
             </div>
@@ -37,12 +32,7 @@ function WhyUs() {
               <div className="detail-box">
                 <h5>Secure Investment</h5>
                 <p>
-                  Incidunt odit rerum tenetur alias architecto asperiores omnis
-                  cumque doloribus aperiam numquam! Eligendi corrupti, molestias
-                  laborum dolores quod nisi vitae voluptate ipsa? In tempore
-                  voluptate ducimus officia id, aspernatur nihil. Tempore
-                  laborum nesciunt ut veniam, nemo officia ullam repudiandae
-                  repellat veritatis unde reiciendis possimus animi autem natus
+                  Entrer le montant Total de ses recharges tout en sélectionnant le nombres de recharges
                 </p>
               </div>
             </div>
@@ -53,12 +43,7 @@ function WhyUs() {
               <div className="detail-box">
                 <h5>Instant Trading</h5>
                 <p>
-                  Incidunt odit rerum tenetur alias architecto asperiores omnis
-                  cumque doloribus aperiam numquam! Eligendi corrupti, molestias
-                  laborum dolores quod nisi vitae voluptate ipsa? In tempore
-                  voluptate ducimus officia id, aspernatur nihil. Tempore
-                  laborum nesciunt ut veniam, nemo officia ullam repudiandae
-                  repellat veritatis unde reiciendis possimus animi autem natus
+                  Entrée soigneusement le(s) code(s) de recharge(s) et votre adresse email. Assurez vous d’avoir correctement remplît le formulaire et cliqués sur le bouton consulter
                 </p>
               </div>
             </div>
@@ -69,18 +54,13 @@ function WhyUs() {
               <div className="detail-box">
                 <h5>Happy Customers</h5>
                 <p>
-                  Incidunt odit rerum tenetur alias architecto asperiores omnis
-                  cumque doloribus aperiam numquam! Eligendi corrupti, molestias
-                  laborum dolores quod nisi vitae voluptate ipsa? In tempore
-                  voluptate ducimus officia id, aspernatur nihil. Tempore
-                  laborum nesciunt ut veniam, nemo officia ullam repudiandae
-                  repellat veritatis unde reiciendis possimus animi autem natus
+                  vous recevrez instantanément un mail de validité
                 </p>
               </div>
             </div>
           </div>
           <div className="btn-box">
-            <a href="">Read More</a>
+            {/* <a href="">Read More</a> */}
           </div>
         </div>
       </section>
@@ -88,4 +68,4 @@ function WhyUs() {
   );
 }
 
-export default WhyUs;
+export default WhyItWork;

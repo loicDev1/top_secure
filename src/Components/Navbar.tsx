@@ -10,7 +10,7 @@ function Navbar() {
               <span>TopSecure</span>
             </a>
 
-            <button
+            {/* <button
               className="navbar-toggler"
               type="button"
               data-toggle="collapse"
@@ -20,7 +20,7 @@ function Navbar() {
               aria-label="Toggle navigation"
             >
               <span className=""> </span>
-            </button>
+            </button> */}
 
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav  ">

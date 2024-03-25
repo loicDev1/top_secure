@@ -143,9 +143,12 @@ function SubmissionForm() {
   };
 
   return (
-    <div className="box form-container" style={{ height: "1000px" }}>
+    <div id="ticketform" className="box form-container" style={{ height: "1000px" }}>
       <div className="login-box" style={{ width: "90%" }}>
-        <h2 style={{ fontSize: "1.5em" }}> Consulter validité </h2>
+        {/* <h2 style={{ fontSize: "1.5em" }}> Consulter votre validité </h2> */}
+        <h2 style={{color:'white'}} >
+        Consulter votre validité
+            </h2>
         {error ? (
           <h2
             style={{

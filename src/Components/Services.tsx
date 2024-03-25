@@ -32,16 +32,14 @@ function Services() {
                   data-aos-duration="1000"
                 >
                   <div className="img-box">
-                  <img src={s1} alt="" />
+                    <img src={s1} alt="" />
                   </div>
                   <div className="detail-box">
-                    <h5>Currency Wallet</h5>
+                    <h5>Wallet</h5>
                     <p>
-                      fact that a reader will be distracted by the readable
-                      content of a page when looking at its layout. The point of
-                      using
+                      Récupérer votre recharge sur top secure avec une adresse bitcoin avec des frais standard
                     </p>
-                    <a href="">Read More</a>
+                    {/* <a href="">Read More</a> */}
                   </div>
                 </div>
               </div>
@@ -53,16 +51,14 @@ function Services() {
                   data-aos-duration="1500"
                 >
                   <div className="img-box">
-                  <img src={s2} alt="" />
+                    <img src={s2} alt="" />
                   </div>
                   <div className="detail-box">
-                    <h5>Security Storage</h5>
+                    <h5>CONFIDENTIALITÉ</h5>
                     <p>
-                      fact that a reader will be distracted by the readable
-                      content of a page when looking at its layout. The point of
-                      using
+                      technologie standard de sécurisation des connexions Internet par le chiffrement des données transitant entre une application et un site web (ou entre deux serveurs). Durant leur transfert, les données (personnelles, financières,etc.)
                     </p>
-                    <a href="">Read More</a>
+                    {/* <a href="">Read More</a> */}
                   </div>
                 </div>
               </div>
@@ -77,27 +73,25 @@ function Services() {
                     <img src={s3} alt="" />
                   </div>
                   <div className="detail-box">
-                    <h5>Expert Support</h5>
+                    <h5>VALIDITÉS</h5>
                     <p>
-                      fact that a reader will be distracted by the readable
-                      content of a page when looking at its layout. The point of
-                      using
+Vous pouvez obtenir les informations de votre coupon , solde du coupon , date  d’activation, date, heure ou validité
                     </p>
-                    <a href="">Read More</a>
+                    {/* <a href="">Read More</a> */}
                   </div>
                 </div>
               </div>
             </div>
-            <div className="btn-box">
+            {/* <div className="btn-box">
               <a
-              style={{margin: "15px 0px"}}
+                style={{ margin: "15px 0px" }}
                 href=""
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
                 View All
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

@@ -39,15 +39,15 @@ function CarouselSection() {
                           modi impedit sequi.
                         </p>
                         <div className="btn-box">
-                          <a href="" className="btn1">
-                            Read More
+                          <a href="#ticketform" className="btn1">
+                            consulter votre ticket
                           </a>
                         </div>
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="img-box">
-                      <img src={slider_img} alt="" />
+                        <img src={slider_img} alt="" />
                       </div>
                     </div>
                   </div>
@@ -58,20 +58,16 @@ function CarouselSection() {
                   <div className="row">
                     <div className="col-md-6 ">
                       <div className="detail-box" data-aos="fade-up" data-aos-duration="1300">
-                        <h1>
+                        {/* <h1>
                           Crypto <br />
                           Currency
-                        </h1>
-                        <p>
-                          Explicabo esse amet tempora quibusdam laudantium,
-                          laborum eaque magnam fugiat hic? Esse dicta aliquid
-                          error repudiandae earum suscipit fugiat molestias,
-                          veniam, vel architecto veritatis delectus repellat
-                          modi impedit sequi.
+                        </h1> */}
+                        <p style={{textAlign:"justify"}}>
+                          Top Secure est service sécurisé de vérification et d'attestation des coupons. Puissant outil d'authentification et de contrôle des coupons , couvre les besoins sur les informations de votre coupon . TOPSECURE est une plateforme qui intégrée parfaitement les cartes prépayées les unes aux autres permettant le libre échange financier.
                         </p>
                         <div className="btn-box">
-                          <a href="" className="btn1">
-                            Read More
+                          <a href="#ticketform" style={{ width: "200px" }} className="btn1">
+                            consulter Votre Ticket
                           </a>
                         </div>
                       </div>
