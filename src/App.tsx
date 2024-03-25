@@ -5,7 +5,7 @@
 // import { InfosUser } from "./utils/Types";
 import CarouselSection from "./Components/CarouselSection";
 import Services from "./Components/Services";
-import Apropos from "./Components/Apropos";
+// import Apropos from "./Components/Apropos";
 import Footer from "./Components/Footer";
 import ClientSection from "./Components/ClientSection";
 import WhyItWork from "./Components/WhyItWork";
