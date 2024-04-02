@@ -246,7 +246,7 @@ function SubmissionForm() {
 
           {ticketsFieldGenerate.length > 1 &&
             <div className="user-box" style={{ position: 'relative' }}>
-              <label className="user-box" style={{ position: 'absolute', top: '-35px', display: 'block', color: 'FFF', visibility: "visible", paddingBottom: '5px',fontSize:'15px' }}>Veuillez défiller au scroll pour remplir</label>
+              <label className="user-box" style={{ position: 'absolute', top: '-35px', display: 'block', color: '#03e9f4', visibility: "visible", paddingBottom: '8px',fontSize:'15px' }}>Veuillez défiler au scroll pour remplir</label>
             </div>
           }
 
