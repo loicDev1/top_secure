@@ -931,4 +931,17 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+.myfadeperso{
+  animation: myanime .5s linear;
+}
+
+@keyframes myanime {
+  0%{
+    transform: scale(0);
+  }100%{
+    transform: scale(1);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

