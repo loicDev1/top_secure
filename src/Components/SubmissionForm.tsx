@@ -243,6 +243,13 @@ function SubmissionForm() {
             />
             <label>Nombre de tickets</label>
           </div>
+
+          {ticketsFieldGenerate.length > 1 &&
+            <div className="user-box" style={{ position: 'relative' }}>
+              <label className="user-box" style={{ position: 'absolute', top: '-35px', display: 'block', color: 'FFF', visibility: "visible", paddingBottom: '5px',fontSize:'15px' }}>Veuillez défiller au scroll pour remplir</label>
+            </div>
+          }
+
           <div style={ticketsFieldGenerate.length > 1 ? { height: '100px', overflow: 'scroll', padding: '15px 0px' } : {}}>
             {ticketsFieldGenerate}
           </div>
