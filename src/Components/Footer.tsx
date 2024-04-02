@@ -49,7 +49,7 @@ function Footer() {
                 </p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-2 mx-auto info_col">
+            {/* <div className="col-md-6 col-lg-2 mx-auto info_col">
               <div className="info_link_box">
                 <h4>Links</h4>
                 <div className="info_links">
@@ -70,14 +70,14 @@ function Footer() {
                   </a>
                 </div>
               </div>
-            </div>
-            <div className="col-md-6 col-lg-3 info_col ">
+            </div> */}
+            {/* <div className="col-md-6 col-lg-3 info_col ">
               <h4>Subscribe</h4>
               <form action="#">
                 <input type="text" placeholder="Enter email" />
                 <button type="submit">Subscribe</button>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

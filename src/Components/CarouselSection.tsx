@@ -62,12 +62,12 @@ function CarouselSection() {
                           Crypto <br />
                           Currency
                         </h1> */}
-                        <p style={{textAlign:"justify"}}>
-                          Top Secure est service sécurisé de vérification et d'attestation des coupons. Puissant outil d'authentification et de contrôle des coupons , couvre les besoins sur les informations de votre coupon . TOPSECURE est une plateforme qui intégrée parfaitement les cartes prépayées les unes aux autres permettant le libre échange financier.
+                        <p style={{textAlign:"justify",width:"90%"}}>
+                          Top Secure est service sécurisé de vérification et d'attestation des coupons. Puissant outil d'authentification et de contrôle des coupons, couvre les besoins sur les informations de votre coupon.TOP SECURE est une plateforme qui intégre parfaitement les cartes prépayées les unes aux autres permettant le libre échange financier.
                         </p>
                         <div className="btn-box">
                           <a href="#ticketform" style={{ width: "200px" }} className="btn1">
-                            consulter Votre Ticket
+                            Consulter votre ticket
                           </a>
                         </div>
                       </div>

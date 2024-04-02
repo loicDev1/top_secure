@@ -6,7 +6,7 @@ import s3 from '../assets/img/s3.png'
 function Services() {
   return (
     <>
-      <section className="service_section ">
+      <section className="service_section layout_padding">
         <div className="service_container">
           <div className="container ">
             <div className="heading_container heading_center">
@@ -18,9 +18,8 @@ function Services() {
               >
                 Nos <span>Services</span>
               </h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration
+              <p> 
+                Voici un ensemble de services que vous offre Top Secure
               </p>
             </div>
             <div className="row">
@@ -36,7 +35,7 @@ function Services() {
                   </div>
                   <div className="detail-box">
                     <h5>Wallet</h5>
-                    <p>
+                    <p style={{textAlign:'justify'}}>
                       Récupérer votre recharge sur top secure avec une adresse bitcoin avec des frais standard
                     </p>
                     {/* <a href="">Read More</a> */}
@@ -55,8 +54,8 @@ function Services() {
                   </div>
                   <div className="detail-box">
                     <h5>CONFIDENTIALITÉ</h5>
-                    <p>
-                      technologie standard de sécurisation des connexions Internet par le chiffrement des données transitant entre une application et un site web (ou entre deux serveurs). Durant leur transfert, les données (personnelles, financières,etc.)
+                    <p style={{textAlign:'justify'}}>
+                      Technologie standard de sécurisation des connexions Internet par le chiffrement des données transitant entre une application et un site web (ou entre deux serveurs). Durant leur transfert, les données (personnelles, financières,etc.)
                     </p>
                     {/* <a href="">Read More</a> */}
                   </div>
@@ -74,7 +73,7 @@ function Services() {
                   </div>
                   <div className="detail-box">
                     <h5>VALIDITÉS</h5>
-                    <p>
+                    <p style={{textAlign:'justify'}}>
 Vous pouvez obtenir les informations de votre coupon , solde du coupon , date  d’activation, date, heure ou validité
                     </p>
                     {/* <a href="">Read More</a> */}

@@ -22,7 +22,7 @@ function Navbar() {
               <span className=""> </span>
             </button> */}
 
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav  ">
                 <li className="nav-item active">
                   <a className="nav-link" href="index.html">
@@ -53,7 +53,7 @@ function Navbar() {
                 <a className="nav-link" href="team.html">
                     CONSULTER VALIDITE
                   </a>
-                </li>
+                </li> */}
                 {/* <li className="nav-item">
                   <a className="nav-link" href="#">
                     <i className="fa fa-user" aria-hidden="true"></i> Login
@@ -67,8 +67,8 @@ function Navbar() {
                     <i className="fa fa-search" aria-hidden="true"></i>
                   </button>
                 </form> */}
-              </ul>
-            </div>
+              {/* </ul>
+            </div> */}
           </nav>
         </div>
       </header>

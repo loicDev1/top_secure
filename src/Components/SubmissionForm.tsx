@@ -143,12 +143,12 @@ function SubmissionForm() {
   };
 
   return (
-    <div id="ticketform" className="box form-container" style={{ height: "1000px" }}>
+    <div id="ticketform" className="box form-container" style={{ height: "800px" }}>
       <div className="login-box" style={{ width: "90%" }}>
         {/* <h2 style={{ fontSize: "1.5em" }}> Consulter votre validité </h2> */}
-        <h2 style={{color:'white'}} >
-        Consulter votre validité
-            </h2>
+        <h2 style={{ color: 'white' }} >
+          Consulter votre validité
+        </h2>
         {error ? (
           <h2
             style={{
@@ -243,7 +243,9 @@ function SubmissionForm() {
             />
             <label>Nombre de tickets</label>
           </div>
-          {ticketsFieldGenerate}
+          <div style={ticketsFieldGenerate.length > 1 ? { height: '100px', overflow: 'auto', padding: '15px 0px' } : {}}>
+            {ticketsFieldGenerate}
+          </div>
           <div className="user-box persofade">
             <input type="email" required onChange={handleEmail} />
             <label>Email</label>
