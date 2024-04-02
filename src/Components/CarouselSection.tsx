@@ -22,7 +22,7 @@ function CarouselSection() {
             data-ride="carousel"
           >
             <div className="carousel-inner">
-              <div className="carousel-item">
+              {/* <div className="carousel-item">
                 <div className="container ">
                   <div className="row">
                     <div className="col-md-6 ">
@@ -52,7 +52,7 @@ function CarouselSection() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="carousel-item active">
                 <div className="container ">
                   <div className="row">
@@ -80,7 +80,7 @@ function CarouselSection() {
                   </div>
                 </div>
               </div>
-              <div className="carousel-item">
+              {/* <div className="carousel-item">
                 <div className="container ">
                   <div className="row">
                     <div className="col-md-6 ">
@@ -110,9 +110,9 @@ function CarouselSection() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
-            <ol className="carousel-indicators">
+            {/* <ol className="carousel-indicators">
               <li
                 data-target="#customCarousel1"
                 data-slide-to="0"
@@ -120,7 +120,7 @@ function CarouselSection() {
               ></li>
               <li data-target="#customCarousel1" data-slide-to="1"></li>
               <li data-target="#customCarousel1" data-slide-to="2"></li>
-            </ol>
+            </ol> */}
           </div>
         </section>
       </div>

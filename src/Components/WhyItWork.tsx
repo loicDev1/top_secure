@@ -63,9 +63,6 @@ function WhyItWork() {
               </div>
             </div>
           </div>
-          <div className="btn-box">
-            {/* <a href="">Read More</a> */}
-          </div>
         </div>
       </section>
     </>

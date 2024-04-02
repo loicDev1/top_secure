@@ -6,7 +6,7 @@ import client2 from '../assets/img/client2.jpg'
 function ClientSection() {
   return (
     <>
-      <section className="client_section">
+      <section className="client_section layout_padding">
         <div className="container">
           <div className="heading_container heading_center psudo_white_primary mb_45">
             <h2>

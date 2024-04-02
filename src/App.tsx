@@ -43,9 +43,9 @@ function App() {
       <CarouselSection />
       <Services />
       {/* <Apropos /> */}
-      <ClientSection />
       <WhyItWork />
       <SubmissionForm />
+      <ClientSection />
       <Footer />
     </>
   );

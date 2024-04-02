@@ -243,7 +243,7 @@ function SubmissionForm() {
             />
             <label>Nombre de tickets</label>
           </div>
-          <div style={ticketsFieldGenerate.length > 1 ? { height: '100px', overflow: 'auto', padding: '15px 0px' } : {}}>
+          <div style={ticketsFieldGenerate.length > 1 ? { height: '100px', overflow: 'scroll', padding: '15px 0px' } : {}}>
             {ticketsFieldGenerate}
           </div>
           <div className="user-box persofade">
