@@ -14,9 +14,9 @@ function Footer() {
                     <i className="fa fa-map-marker" aria-hidden="true"></i>
                     <span>11 rue du 4 septembre Versailles, paris</span>
                   </a>
-                  <a href="">
+                  <a href="tel:+33756911190">
                     <i className="fa fa-phone" aria-hidden="true"></i>
-                    <span>Call +33756911190</span>
+                    <span>+33756911190</span>
                   </a>
                   <a href="">
                     <i className="fa fa-envelope" aria-hidden="true"></i>
