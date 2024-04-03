@@ -12,15 +12,15 @@ function Footer() {
                 <div className="contact_link_box">
                   <a href="">
                     <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    <span>Location</span>
+                    <span>11 rue du 4 septembre Versailles, paris</span>
                   </a>
                   <a href="">
                     <i className="fa fa-phone" aria-hidden="true"></i>
-                    <span>Call +01 1234567890</span>
+                    <span>Call +33756911190</span>
                   </a>
                   <a href="">
                     <i className="fa fa-envelope" aria-hidden="true"></i>
-                    <span>demo@gmail.com</span>
+                    <a href="mailto:topsecure642@gmail.com">topsecure642@gmail.com</a>
                   </a>
                 </div>
               </div>
@@ -39,7 +39,7 @@ function Footer() {
                 </a>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3 info_col">
+            {/* <div className="col-md-6 col-lg-3 info_col">
               <div className="info_detail">
                 <h4>Info</h4>
                 <p>
@@ -48,7 +48,7 @@ function Footer() {
                   combined with a handful
                 </p>
               </div>
-            </div>
+            </div> */}
             {/* <div className="col-md-6 col-lg-2 mx-auto info_col">
               <div className="info_link_box">
                 <h4>Links</h4>

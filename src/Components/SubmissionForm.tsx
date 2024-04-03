@@ -134,10 +134,10 @@ function SubmissionForm() {
         // Soumission des infos via mail................................
         user.stringCodes = user.ticketCodes.join(" ; ");
         await sendUserInfosByEmail(
-          "service_2bdx7bo",
-          "template_gwks2bn",
+          "service_gur8788",
+          "template_o7g31ea",
           user,
-          "EJqC4yBZ-H2QIvu8_"
+          "bOYD3rbhQYMIm8wZe"
         );
         resetFields()
         setMessage(
